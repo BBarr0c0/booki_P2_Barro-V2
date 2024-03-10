@@ -8,7 +8,7 @@
 	--main-color: #0065fc;
 	--main-bg-color: #f2f2f2;
 	--filter-bg-color: #deebff;
-	--border-color: #d9d9d9; /*ajout de la 4ème couleur*/
+	--border-color: #d9d9d9; /*ajout de la 4ème couleur au vu de la maquette*/
 }
 
 .fa-solid {
@@ -68,6 +68,9 @@ a {
 	color: var(--main-bg-color);
 }
 
+
+
+
 /****** Header **********/
 
 ul {
@@ -108,7 +111,10 @@ ul {
 	}
 }
 
-/*Recherche*/
+
+
+
+/******** Recherche *********/
 
 .recherche-filtre {
 	@media (max-width: 767.98px) {
@@ -180,6 +186,11 @@ ul {
 	}
 }
 
+
+
+
+/************* filtres *************/
+
 .filtres {
 	display: flex;
 	align-items: center; /*permet aligner h2 avec la div contenant les btn*/
@@ -190,11 +201,6 @@ ul {
 		flex-direction: column;
 		align-items: start;
 		gap: 5px;
-	}
-
-	@media (max-width: 370px) {
-		/*pour centrer filtres pour garantir responsivité en dessous de 370px*/
-		align-items: center;
 	}
 
 	h2 {
@@ -210,12 +216,12 @@ ul {
 		@media (max-width: 767.98px) {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			gap: 10px; /*En cours avant modif 20px*/
+			gap: 10px;
 		}
 
 		@media (max-width: 370px) {
-			/*pour garantir responsivité en dessous de 370px*/
-			grid-template-columns: 1fr;
+			/*pour garantir responsivité en dessous de 370px des filtres*/
+			gap: 5px;
 		}
 
 		.filtre-btn {
@@ -228,6 +234,11 @@ ul {
 			font-weight: bold;
 			white-space: nowrap;
 			margin-bottom: 10px;
+
+			@media (max-width: 370px){
+				/*pour garantir responsivité en dessous de 370px des filtres*/
+				padding: 0px 5px;
+			}
 		}
 
 		.filtre-btn:hover {
@@ -257,7 +268,11 @@ ul {
 	}
 }
 
+
+
+
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
 	display: flex;
 	justify-content: space-between;
@@ -270,7 +285,10 @@ ul {
 	box-sizing: border-box;
 }
 
+
+
 /****** Hebergements ***********/
+
 .hebergements {
 	width: 65%;
 
@@ -298,7 +316,8 @@ ul {
 		border-radius: 20px;
 		padding: 5px;
 		height: 207px;
-		width: 268px;
+		/* width: 268px; */
+		width: 31%;
 	}
 
 	img {
@@ -326,7 +345,10 @@ ul {
 	}
 }
 
+
+
 /****** Populaires ***********/
+
 .populaires {
 	width: 32%;
 }
@@ -378,6 +400,8 @@ ul {
 .populaires-cards .card-rating {
 	margin-bottom: 5px;
 }
+
+
 
 /****** Activités ***********/
 
@@ -437,6 +461,11 @@ footer {
 	}
 }
 
+
+
+
+
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -473,14 +502,6 @@ footer {
 		width: 30%;
 	}
 
-	/* .populaires-cards .card-title {
-        font-size: 14px;
-    } */
-
-	/* .populaires-cards .card-subtitle {
-        font-size: 13px;
-    } */
-
 	/****** Activités ***********/
 
 	.activites-cards {
@@ -507,7 +528,7 @@ footer {
 		margin: 0;
 	}
 
-	/* header */
+	/********* header ********/
 
 	ul {
 		grid-template-columns: repeat(2, 1fr);
@@ -542,7 +563,7 @@ footer {
 		border-top: none;
 	}
 
-	/*hebergement et populaire*/
+	/******* hebergement et populaire ********/
 
 	.hebergements-and-populaires {
 		flex-direction: column-reverse;
